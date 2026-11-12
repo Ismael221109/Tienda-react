@@ -10,3 +10,6 @@ const productos = [
  { id: 9, nombre: 'Fuente de poder', precio: 150000, categoria: 'Componentes', stock: 2 },
  { id: 10, nombre: 'Gabinete', precio: 100000, categoria: 'Componentes', stock: 5 }
 ];
+
+const nombres = productos.map(producto => producto.nombre);
+console.log(nombres);
