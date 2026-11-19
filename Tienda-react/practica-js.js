@@ -28,3 +28,8 @@ console.log(
 //Comprobación de que el original no cambió
 console.log('Original:', productos[1]);
 console.log('Copia:', productoModificado);
+
+
+//PRIMER COMMIT IMPORTANTE Y SIGNIFICATIVO DEL TALLER TENIENDO EN CUENTA LOS 30 QUE YA HICISMOS 
+// ATT: ISMAEL PALENCIA BOLIVAR 3409610
+//💕😁👍👍(●'◡'●)^_^~~~///(^v^)\\\~~~( *^-^)ρ(^0^* )👈(ﾟヮﾟ👈)b(￣▽￣)do(≧∀≦)o(❤️´艸｀❤️)(⓿_⓿)(. ❛ ᴗ ❛.)( ˘︹˘ )
