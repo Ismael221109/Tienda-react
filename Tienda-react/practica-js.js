@@ -11,5 +11,11 @@ const productos = [
  { id: 10, nombre: 'Gabinete', precio: 100000, categoria: 'Componentes', stock: 5 }
 ];
 
-const nombres = productos.map(producto => producto.nombre);
-console.log(nombres);
+const preciosConIva = producto.map(prod => prod.precio * 1.19);
+console.log(preciosConIva);
+
+const nombresMayuscula = producto.map(prod => prod.nombre.toUpperCase());
+console.log(nombresMayuscula);
+
+const resumenProductos = producto.map(prod => prod.nombre + " cuesta $" + prod.precio);
+console.log(resumenProductos);
