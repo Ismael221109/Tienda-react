@@ -11,6 +11,6 @@ const productos = [
  { id: 10, nombre: 'Gabinete', precio: 100000, categoria: 'Componentes', stock: 5 }
 ];
 
-const productosFiltrados = productos.filter(producto => producto.categoria = 'Componentes');
+const productosFiltrados = productos.filter(producto => producto.id === 5);
 
 console.log(productosFiltrados);
