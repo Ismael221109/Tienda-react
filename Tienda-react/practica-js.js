@@ -11,6 +11,10 @@ const productos = [
  { id: 10, nombre: 'Gabinete', precio: 100000, categoria: 'Componentes', stock: 5 }
 ];
 
-const productosFiltrados = productos.filter(producto => producto.id === 5);
+function buscarProducto(id) {
+  return productos.find(producto => producto.id === id);
+}
 
-console.log(productosFiltrados);
+
+const resultado = buscarProducto(2);
+console.log(resultado); 
