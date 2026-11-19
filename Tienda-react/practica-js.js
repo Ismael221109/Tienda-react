@@ -11,21 +11,20 @@ const productos = [
  { id: 10, nombre: 'Gabinete', precio: 100000, categoria: 'Componentes', stock: 5 }
 ];
 
-const hayAgotados = productos.some(producto => producto.stock === 0);
+//Producto modificado el 2
+const productoModificado = {
+  ...productos[1],
+  precio: 65000,
+  stock: 15
+};
 
-const hayCostosos = productos.some(producto => producto.precio > 1000000);
+const { nombre, precio, stock } = productoModificado;
 
-const preciosValidos = productos.every(producto => producto.precio > 0);
-
-const stocksValidos = productos.every(producto => producto.stock >= 0);
-
-const valorInventario = productos.reduce(
-  (total, producto) => total + producto.precio * producto.stock,
-  0
+//Frase con Template Literal y Operador Ternario
+console.log(
+  `El producto ${nombre} ahora cuesta $${precio.toLocaleString('es-CO')} y su estado es: ${stock > 0 ? 'Disponible' : 'Agotado'}.`
 );
 
-console.log('¿Existe algún producto agotado?:', hayAgotados);
-console.log('¿Existe algún producto > $1.000.000?:', hayCostosos);
-console.log('¿Todos tienen precio > 0?:', preciosValidos);
-console.log('¿Todos tienen stock >= 0?:', stocksValidos);
-console.log('Valor total del inventario: $' + valorInventario.toLocaleString('es-CO'));
+//Comprobación de que el original no cambió
+console.log('Original:', productos[1]);
+console.log('Copia:', productoModificado);
