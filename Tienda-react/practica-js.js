@@ -11,5 +11,6 @@ const productos = [
  { id: 10, nombre: 'Gabinete', precio: 100000, categoria: 'Componentes', stock: 5 }
 ];
 
-const disponibles = producto.filter(producto => producto.precio >= 100000);
-console.log(disponibles);
+const productosFiltrados = producto.filter(producto => producto.precio >= 50000 && producto.precio <= 200000);
+
+console.log(productosFiltrados);
