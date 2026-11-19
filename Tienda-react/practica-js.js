@@ -11,10 +11,21 @@ const productos = [
  { id: 10, nombre: 'Gabinete', precio: 100000, categoria: 'Componentes', stock: 5 }
 ];
 
-function buscarProducto(id) {
-  return productos.find(producto => producto.id === id);
-}
+const hayAgotados = productos.some(producto => producto.stock === 0);
 
+const hayCostosos = productos.some(producto => producto.precio > 1000000);
 
-const resultado = buscarProducto(2);
-console.log(resultado); 
+const preciosValidos = productos.every(producto => producto.precio > 0);
+
+const stocksValidos = productos.every(producto => producto.stock >= 0);
+
+const valorInventario = productos.reduce(
+  (total, producto) => total + producto.precio * producto.stock,
+  0
+);
+
+console.log('¿Existe algún producto agotado?:', hayAgotados);
+console.log('¿Existe algún producto > $1.000.000?:', hayCostosos);
+console.log('¿Todos tienen precio > 0?:', preciosValidos);
+console.log('¿Todos tienen stock >= 0?:', stocksValidos);
+console.log('Valor total del inventario: $' + valorInventario.toLocaleString('es-CO'));
